@@ -89,7 +89,7 @@ Learning what to look for on your own skin gives you the power to detect cance
 
 - **Multimodal Deep Learning Model:**
   - Fuses visual features from ResNet50 with clinical metadata using a custom clinical feature extractor and neural network-based fusion layer.
-  - Achieved **90% test accuracy** and **90% weighted F1 score** on the HAM10000 dataset.
+  - Achieved **90% test accuracy** and **90% weighted F1 score** on the HAM10000 dataset (from Kaggle).
 - **Deployment:**
   - Deployed as an AWS SageMaker inference endpoint for real-time skin lesion classification.
 - **Model Architecture:**
