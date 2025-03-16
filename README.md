@@ -1,137 +1,155 @@
-Hello World
+# SkinGuardian Documentation
 
-Nice to meet you! My name is Mohamed Khalil Ben Nasr. I am an international student from tunisia. I am a Senior in Lawrence University, majoring in Computer Science.
-I'm a passionate software developer with a strong background in computer science, full-stack development, AI, and AWS Cloud technologies.
-Attending Lawrence wasn't just about attaining academic excellence and learning computer science, it was also an enlightening journey that helped me learn about myself through the different experiences i went though
-i was able to understand that my goal in life is to make a positive impact and help people in my own way
-My mission is to leverage my technical skills to make a meaningful impact in healthcare and empower those in need.
-I aim to create innovative solutions that improve lives and foster hope.
+Welcome to **SkinGuardian** – your digital AI-companion for the early detection of skin cancer.
 
-Motivation: Healthcare Challenges Around the World (i want the tunisian and american section to be displayed horizantally next to each other like in a div wehre flex-horizantal)
-![Tunisian Flag](images/tunisia.png)
+---
 
-- Uneven distribution of healthcare services across regions
-- Inadequate funding for public healthcare
-- A shortage of medical professionals due to high-skilled immigration
-- Poor access to specialized care
+## Table of Contents
 
-![American Flag](images/usa.png)
+- [Introduction](#introduction)
+- [Motivation](#motivation)
+- [Project Overview](#project-overview)
+  - [AI-Driven Diagnosis](#ai-driven-diagnosis)
+  - [Full-Stack Cloud Architecture](#full-stack-cloud-architecture)
+- [System Architecture](#system-architecture)
+- [Data Flow & Workflow](#data-flow--workflow)
+- [Security Measures](#security-measures)
+- [Example User Interaction](#example-user-interaction)
+- [Conclusion](#conclusion)
+- [Additional Resources](#additional-resources)
 
-- No national health insurance, which is against universal healthcare and SDGs devised by the UN
-- Millions of Americans remain uninsured, underinsured, or unsure of their coverage
-- Leading cause of personal bankruptcy is medical debt
-- Healthcare is inaccessible to underprivileged and underrepresented communities
+---
 
-Mission
-Healthcare stands as a fundamental pillar in any society, holding a central place in building resilient and sustainable nations.
-I want to contribute my efforts towards the achievement of human security and a global society that leaves no one’s health behind, using technology.
+## Introduction
+
+Hello, my name is **Mohamed Khalil Ben Nasr**. I am an international student from Tunisia, currently a Senior at Lawrence University majoring in Computer Science (with a minor in Statistics and Data Science). I'm a passionate software developer with a strong background in full-stack development, artificial intelligence, and AWS Cloud technologies. My mission is to leverage my technical skills to make a meaningful impact the world and empower those in need.
+
+This documentation provides a comprehensive overview of SkinGuardian, a project designed to leverage cutting-edge deep learning techniques for early skin cancer detection.
+
+---
+
+## Motivation
+
+I lived in Tunisia and USA for most of my life, where I experienced healthcare challenges first-hand. Below are my two perspectives of the healthcare challenges in both countries:
+
+<div>
+  <div>
+    <img src="images/tunisia.png" alt="Tunisian Flag" />
+    <strong>Tunisian Challenges:</strong>
+    <ul>
+      <li>Uneven distribution of healthcare services</li>
+      <li>Inadequate funding for public healthcare</li>
+      <li>Shortage of medical professionals due to high-skilled immigration</li>
+      <li>Poor access to specialized care</li>
+    </ul>
+  </div>
+  <div>
+    <img src="images/usa.png" alt="American Flag" />
+    <strong>American Challenges:</strong>
+    <ul>
+      <li>Lack of national health insurance; millions uninsured or underinsured</li>
+      <li>Medical debt as a leading cause of personal bankruptcy</li>
+      <li>Healthcare inaccessibility for underprivileged communities</li>
+    </ul>
+  </div>
+</div>
+
+**Mission:**  
+Healthcare is a fundamental pillar for building resilient and sustainable societies. My goal is to leverage technology to make a positive impact in healthcare, ensuring no one’s health is left behind.  
 ![Mission Icon](images/mission_icon.png)
 
-SkinGuardian’ s Focus: Why Skin Cancer?
+---
 
-Skin Cancer is the most common cancer in the United States and worldwide.
-Skin cancer can affect anyone, regardless of skin color.
+## Project Overview
 
-Skin Cancer Risk Factors:
-UV light exposure
-Skin type
-Family / personal history of skin cancer
-Weak immune system
-Age
+**SkinGuardian** is a full-stack, cloud-based platform designed for the early detection of skin cancer. It combines advanced AI with a secure, scalable architecture on AWS to provide real-time diagnosis and personalized recommendations.
 
-![SkinCancer Facts](images/SkinCancerFacts.png)
+### AI-Driven Diagnosis
 
-Skin Cancer is the cancer you see.
-That’s why skin exams, both at home and with a dermatologist, are especially vital.
+- **Multimodal Deep Learning Model:**
+  - Fuses visual features from ResNet50 with clinical metadata using a custom clinical feature extractor and neural network-based fusion layer.
+  - Achieved **90% test accuracy** and **90% weighted F1 score** on the HAM10000 dataset.
+- **Deployment:**
+  - Deployed as an AWS SageMaker inference endpoint for real-time skin lesion classification.
+- **Model Architecture:**
+  ![model architecture](/images/SkinGuardian-Model-Architecture.drawio.png)
 
-Early detection saves lives.
-Learning what to look for on your own skin gives you the power to detect cancer early when it’s easiest to cure, before it can become dangerous, disfiguring or deadly.
+---
 
-![SkinCancer Survival Chart](images/skinCancerSurvivalChart.png)
+### Full-Stack Cloud Architecture
 
-That is why I am working on:SkinGuardian
-![SkinGuardian Logo](images/SkinGuardianLogo.png)
-An AI-powered digital companion for the early detection of skin cancer
+- **Backend:**
 
-The vision behind SkinGuardian (i want the vision details to be displayed horizantally next to each other like in a div wehre flex-horizantal)
-![vision 1](images/vision1.png)
-Classify skin lesions and support self-conducted skin exams
+  - Built with Spring Boot and secured with JWT authentication.
+  - Hosted on an EC2 instance in a public subnet; only accepts traffic from an Application Load Balancer (ALB).
+  - CI/CD pipeline implemented with GitHub Actions and Docker for seamless updates.
+  - Integrates with an AWS RDS MySQL database (in a private subnet) and an S3 bucket for storing skin lesion images.
 
-![vision 2](images/vision2.png)
-Generate medically accurate diagnosis, especially when access to dermatologists is limited
+- **Frontend:**
 
-![vision 3](images/vision3.png)
-Help in the prevention of skin cancer through personalized recommendations and lifestyle factors tracking
+  - Developed with React, Vite, and TypeScript using Shadcn UI for styling.
+  - Deployed via AWS Amplify, which is linked to a GitHub repository and manages CI/CD automatically.
+  - A custom domain in Route 53 points to the ALB for secure HTTPS traffic.
 
-SkinGuardian Overview
+- **Load Balancing & Security:**
+  - ALB terminates SSL using an ACM certificate and routes secure traffic to the backend.
+  - AWS WAF is deployed in front of the ALB to block malicious traffic.
+  - Security groups enforce strict communication rules between ALB, EC2, and RDS.
 
-SkinGuardian is a full-stack, cloud-based platform designed for the early detection of skin cancer. The system leverages a multimodal deep learning model that combines visual features (extracted via ResNet50) with clinical metadata to deliver real-time skin lesion classification. The platform is built with a robust, secure, and scalable architecture using modern web and cloud technologies.
+---
 
-SkinGuardian AI Model
-Developed a multimodal deep learning model that fuses visual features from ResNet50 with clinical metadata via a custom
-clinical feature extractor with embedding layers and neural network-based fusion layer. My model Achieved 90% test accuracy and weighted F1 score on HAM10000, outperforming baseline single-modality models.
+## System Architecture
 
-SkinGuardian AI Model Architecture
-![model architecture](/images/SkinGuardian-Model-Architecture.drawio.png)
-
-SkinGuardian AI Model Results
-![model results](/images/SkinGuardianAIModelResults.png)
-
-SkinGuardian System Architecture
-
-Overview
+Below is a high-level diagram illustrating the system architecture:
 ![skinguardian architecture](/images/SkinGuardian.drawio.png)
 
-High-Level Components
-Frontend:
-Developed with React, Vite, and TypeScript using Shadcn UI for styling, the frontend is deployed via AWS Amplify. Amplify manages the CI/CD pipeline by integrating directly with GitHub, ensuring that every update is automatically built and deployed.
+---
 
-Domain & Load Balancing:
-The custom domain is managed through AWS Route 53, which points to an Application Load Balancer (ALB). The ALB terminates SSL connections using an ACM-issued certificate and routes secure HTTPS traffic to the backend.
+## Data Flow & Workflow
 
-Backend:
-The Spring Boot API is hosted on an EC2 instance in a public subnet. It is secured with JWT-based authentication, and only specific endpoints (e.g., login and signup) are publicly accessible. All other endpoints require a valid JWT for access. A CI/CD pipeline for the backend is implemented using GitHub Actions and Docker, automating builds, image creation, and deployments.
+### User Interaction & Frontend
 
-Data & AI Services:
-The backend integrates with an AWS RDS MySQL database in a private subnet for storing application data, and uses an S3 bucket to store skin lesion images. The AI model is deployed as an inference endpoint on AWS SageMaker, enabling real-time diagnosis.
+- **Website Access:** Users access the SkinGuardian website via https://main.d374fmb5qt34h7.amplifyapp.com/.
+- **Secure Requests:** The React-based frontend makes secure HTTPS requests to the backend.
 
-Security:
-AWS WAF is deployed in front of the ALB to provide application layer security, filtering out malicious traffic. Additionally, security groups are strictly configured: the EC2 instance only accepts traffic from the ALB, and the RDS instance only accepts connections from the EC2 instance’s security group. Spring Security enforces JWT authentication across secure endpoints.
+### Load Balancing & Security
 
-Data Flow & Workflow
-User Interaction & Frontend:
+- **DNS Resolution:** Route 53 resolves the custom domain to the Application Load Balancer (ALB).
+- **SSL Termination:** The ALB, protected by AWS WAF, terminates SSL and forwards traffic to the backend.
 
-Users access the SkinGuardian website via the custom domain.
-The frontend, built with React, makes secure HTTPS requests to the backend using the custom domain.
-Load Balancing & Security:
+### Backend Processing
 
-Route 53 resolves the custom domain to the ALB.
-The ALB, protected by AWS WAF, terminates SSL and forwards traffic to the backend EC2 instance.
-Backend Processing & Data Management:
+- **API Handling:** The Spring Boot API on EC2 processes requests and enforces JWT authentication.
+- **Data Storage:** User data is stored in an AWS RDS MySQL database, while skin lesion images are stored in an S3 bucket.
+- **AI Inference:** For diagnoses, image and clinical data are sent to the AWS SageMaker inference endpoint, which returns classification results.
 
-The Spring Boot API on EC2 processes requests, handles authentication via JWT, and interacts with the RDS MySQL database for application data.
-For diagnoses, image and clinical data are sent to the AI model endpoint.
-AI Model Inference:
+### CI/CD Integration
 
-The multimodal deep learning model on AWS SageMaker processes the data and returns a classification result to the backend, which then sends it to the frontend.
-Continuous Integration & Deployment:
+- **Frontend CI/CD:** The frontend is automatically built and deployed via AWS Amplify.
+- **Backend CI/CD:** The backend is continuously integrated and deployed using GitHub Actions and Docker.
 
-The frontend uses AWS Amplify for CI/CD, while the backend is automatically built and deployed using GitHub Actions and Docker, ensuring the system remains up-to-date with every commit.
-Security Measures
-JWT Authentication:
-Secure endpoints require a valid JWT token, ensuring that only authenticated users can access sensitive features.
+---
 
-AWS WAF:
-Provides a protective barrier at the ALB, filtering out common web exploits and malicious traffic.
+## Security Measures
 
-Strict Security Groups:
-The EC2 instance only accepts traffic from the ALB, and the RDS instance is restricted to traffic coming from the EC2 instance, reducing exposure to the public internet.
+- **JWT Authentication:** Secure endpoints require a valid JWT token, ensuring only authenticated users can access sensitive features.
+- **AWS WAF:** Protects the ALB from malicious traffic, blocking common web exploits.
+- **Strict Security Groups:**
+  - The EC2 instance only accepts traffic from the ALB.
+  - The RDS instance is restricted to connections from the EC2 instance’s security group.
+- **SSL Termination:** The ALB terminates SSL using an ACM certificate, ensuring secure data transmission between clients and the backend.
 
-Example User interaction
-User signs up
-user makes profile
-user submits the new diagnosis form with the required "localization" and "image"
-user checks history tab to track self-conducted skin exams and mole diagnoses
+---
 
-Conclusion
-SkinGuardian integrates advanced deep learning with a secure, scalable full-stack architecture on AWS. The system leverages modern CI/CD practices, cloud-native services, and robust security measures to provide reliable, real-time skin lesion diagnosis. This documentation outlines the high-level architecture, data flow, and security design, offering insight into the end-to-end operation of the platform.
+## Example User Interaction
+
+- **User Signs Up:** Registers on the platform and logs in to receive a JWT token.
+- **User Creates a Profile:** Completes a profile with clinical data.
+- **User Submits a Diagnosis:** Uploads an image and selects the lesion localization via a diagnosis form.
+- **User Views History:** Checks past diagnoses in a history tab, enabling self-conducted skin exams.
+
+---
+
+## Conclusion
+
+SkinGuardian seamlessly integrates advanced deep learning with a robust, secure full-stack architecture on AWS. The platform leverages state-of-the-art CI/CD practices, cloud-native services, and comprehensive security measures to deliver reliable, real-time skin lesion diagnosis and personalized healthcare recommendations.
