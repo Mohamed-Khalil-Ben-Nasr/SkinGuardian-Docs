@@ -183,12 +183,24 @@ Below is a high-level diagram illustrating the system architecture:
 
 ## Conclusion
 
-SkinGuardian seamlessly integrates advanced deep learning with a robust, secure full-stack architecture on AWS. The platform leverages state-of-the-art CI/CD practices, cloud-native services, and comprehensive security measures to deliver reliable, real-time skin lesion diagnosis and personalized healthcare recommendations.
+- SkinGuardian seamlessly integrates advanced deep learning with a robust, secure full-stack architecture on AWS. The platform leverages state-of-the-art CI/CD practices, cloud-native services, and comprehensive security measures to deliver reliable, real-time skin lesion diagnosis and personalized healthcare recommendations. 
+- Thank you for reading until the end. I hope you enjoyed it!
+- Stay in tune for upcoming updates and improvements!
 
 ---
 
 ## Associated Repositories and Additional Resources
-
-SkinGuardian Front-End Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-Front-End
-SkinGuardian Back-End Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-Back-End
+<ul>
+  <li>
+    SkinGuardian Front-End Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-Front-End
+  </li>
+  <li>
+    SkinGuardian Back-End Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-Back-End
+  </li>
+  <li>
+    
 SkinGuardian AI Model Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-AI-Model
+  </li>
+</ul>
+
+
