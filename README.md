@@ -17,6 +17,7 @@ Welcome to **SkinGuardian** – your digital AI-companion for the early detectio
 - [Data Flow & Workflow](#data-flow--workflow)
 - [Security Measures](#security-measures)
 - [Example User Interaction](#example-user-interaction)
+- [Next Steps](#next-steps)
 - [Conclusion](#conclusion)
 - [Associated Repositories and Additional Resources](#associated-repositories-and-additional-resources)
 
@@ -94,9 +95,7 @@ Learning what to look for on your own skin gives you the power to detect cance
 - **Model Architecture:**
   ![model architecture](/images/SkinGuardian-Model-Architecture.drawio.png)
 - **Model Performance Results**
-    <div align="center>
-        <img src="images/SkinGuardianAIModelResults.png" alt="model results">
-    </div>
+  ![model results](/images/SkinGuardianAIModelResults.png)
 
 ---
 
@@ -171,6 +170,14 @@ Below is a high-level diagram illustrating the system architecture:
 - **User Creates a Profile:** Completes a profile with clinical data.
 - **User Submits a Diagnosis:** Uploads an image and selects the lesion localization via a diagnosis form.
 - **User Views History:** Checks past diagnoses in a history tab, enabling self-conducted skin exams.
+
+---
+
+## Next Steps
+
+| ![step 1](images/step1.png) | ![step 2](images/step2.png) | ![step 3](images/step3.png) |
+|----------------------------------|----------------------------------|----------------------------------|
+| **Generate accurate clinical diagnoses and personalized reccomendations** | **Improve SkinGuardian's model performance and UI design** | **Advertize SkinGuardian to help those in need and make an impact** |
 
 ---
 
