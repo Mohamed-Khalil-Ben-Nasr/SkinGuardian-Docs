@@ -16,7 +16,7 @@ Welcome to **SkinGuardian** – your digital AI-companion for the early detectio
 - [Security Measures](#security-measures)
 - [Example User Interaction](#example-user-interaction)
 - [Conclusion](#conclusion)
-- [Additional Resources](#additional-resources)
+- [Associated Repositories and Additional Resources](#associated-repositories-and-additional-resources)
 
 ---
 
@@ -30,33 +30,18 @@ This documentation provides a comprehensive overview of SkinGuardian, a project 
 
 ## Motivation
 
-I lived in Tunisia and USA for most of my life, where I experienced healthcare challenges first-hand. Below are my two perspectives of the healthcare challenges in both countries:
+I lived in Tunisia and the USA for most of my life, where I experienced healthcare challenges first-hand. Below are my two perspectives of the healthcare challenges in both countries:
 
-<div>
-  <div>
-    <img src="images/tunisia.png" alt="Tunisian Flag" />
-    <strong>Tunisian Challenges:</strong>
-    <ul>
-      <li>Uneven distribution of healthcare services</li>
-      <li>Inadequate funding for public healthcare</li>
-      <li>Shortage of medical professionals due to high-skilled immigration</li>
-      <li>Poor access to specialized care</li>
-    </ul>
-  </div>
-  <div>
-    <img src="images/usa.png" alt="American Flag" />
-    <strong>American Challenges:</strong>
-    <ul>
-      <li>Lack of national health insurance; millions uninsured or underinsured</li>
-      <li>Medical debt as a leading cause of personal bankruptcy</li>
-      <li>Healthcare inaccessibility for underprivileged communities</li>
-    </ul>
-  </div>
-</div>
+| ![Tunisian Flag](images/tunisia.png) | ![American Flag](images/usa.png) |
+|--------------------------------------|----------------------------------|
+| **Tunisian Challenges:** <br> - Uneven distribution of healthcare services <br> - Inadequate funding for public healthcare <br> - Shortage of medical professionals due to high-skilled immigration <br> - Poor access to specialized care | **American Challenges:** <br> - Lack of national health insurance; millions uninsured or underinsured <br> - Medical debt as a leading cause of personal bankruptcy <br> - Healthcare inaccessibility for underprivileged communities |
+
 
 **Mission:**  
-Healthcare is a fundamental pillar for building resilient and sustainable societies. My goal is to leverage technology to make a positive impact in healthcare, ensuring no one’s health is left behind.  
-![Mission Icon](images/mission_icon.png)
+<div align="center">
+  <p>Healthcare is a fundamental pillar for building resilient and sustainable societies. My goal is to leverage technology to make a positive impact in healthcare, ensuring no one’s health is left behind.  </p>
+  <img src="images/mission_icon.png" alt="Mission Icon">
+</div>
 
 ---
 
@@ -153,3 +138,11 @@ Below is a high-level diagram illustrating the system architecture:
 ## Conclusion
 
 SkinGuardian seamlessly integrates advanced deep learning with a robust, secure full-stack architecture on AWS. The platform leverages state-of-the-art CI/CD practices, cloud-native services, and comprehensive security measures to deliver reliable, real-time skin lesion diagnosis and personalized healthcare recommendations.
+
+---
+
+## Associated Repositories and Additional Resources
+
+SkinGuardian Front-End Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-Front-End
+SkinGuardian Back-End Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-Back-End
+SkinGuardian AI Model Github Repository: https://github.com/Mohamed-Khalil-Ben-Nasr/SkinGuardian-AI-Model
