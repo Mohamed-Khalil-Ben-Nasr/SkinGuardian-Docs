@@ -56,11 +56,11 @@ Skin Cancer is the most common cancer in the United States and worldwide. It can
 
 Skin Cancer Risk Factors:
 <ul>
-    <li> - UV light exposure</li>
-    <li> - Skin type</li>
-    <li> - Family/ personal history of skin cancer</li>
-    <li> - Weak immune system</li>
-    <li> - Age </li>
+    <li> UV light exposure</li>
+    <li> Skin type</li>
+    <li> Family/ personal history of skin cancer</li>
+    <li> Weak immune system</li>
+    <li> Age </li>
 </ul>
 
 **Skin Cancer is the cancer you see.** 
