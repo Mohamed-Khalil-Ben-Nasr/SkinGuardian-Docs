@@ -25,9 +25,13 @@ Welcome to **SkinGuardian** – your digital AI-companion for the early detectio
 
 ## Introduction
 
-Hello, my name is **Mohamed Khalil Ben Nasr**. I am an international student from Tunisia, currently a Senior at Lawrence University majoring in Computer Science (with a minor in Statistics and Data Science). I'm a passionate software developer with a strong background in full-stack development, artificial intelligence, and AWS Cloud technologies. My mission is to leverage my technical skills to make a meaningful impact the world and empower those in need.
+Hello, my name is **Mohamed Khalil Ben Nasr**. I am an international student from **Tunisia**, currently a Senior at **Lawrence University** majoring in **Computer Science**. 
 
-This documentation provides a comprehensive overview of SkinGuardian, a project designed to leverage cutting-edge deep learning techniques for early skin cancer detection.
+I'm a passionate **software engineer** with a strong background in **full-stack development**, **artificial intelligence**, **data structures and algorithms**, and **AWS Cloud technologies**. 
+
+My mission is to leverage my technical skills to **make a meaningful impact the world and empower those in need**.
+
+This documentation provides a comprehensive overview of **SkinGuardian**, a project designed to leverage cutting-edge deep learning techniques for **early skin cancer detection**.
 
 ---
 
