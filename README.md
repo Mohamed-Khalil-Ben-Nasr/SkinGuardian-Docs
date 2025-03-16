@@ -29,7 +29,7 @@ Hello, my name is **Mohamed Khalil Ben Nasr**. I am an international student fro
 
 I'm a passionate **software engineer** with a strong background in **full-stack development**, **artificial intelligence**, **data structures and algorithms**, and **AWS Cloud technologies**. 
 
-My mission is to leverage my technical skills to **make a meaningful impact the world and empower those in need**.
+My mission is to leverage my technical skills to **make a meaningful impact in the world and empower those in need**.
 
 This documentation provides a comprehensive overview of **SkinGuardian**, a project designed to leverage cutting-edge deep learning techniques for **early skin cancer detection**.
 
