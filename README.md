@@ -8,7 +8,9 @@ Welcome to **SkinGuardian** – your digital AI-companion for the early detectio
 
 - [Introduction](#introduction)
 - [Motivation](#motivation)
+  -[SkinGuardian's Focus: Why Skin Cancer?](#skinguardians-focus-why-skin-cancer)
 - [Project Overview](#project-overview)
+  - [The Vision Behind SkinGuardian](#the-vision-behind-skinguardian)
   - [AI-Driven Diagnosis](#ai-driven-diagnosis)
   - [Full-Stack Cloud Architecture](#full-stack-cloud-architecture)
 - [System Architecture](#system-architecture)
@@ -43,11 +45,44 @@ I lived in Tunisia and the USA for most of my life, where I experienced healthca
   <img src="images/mission_icon.png" alt="Mission Icon">
 </div>
 
+### SkinGuardian's Focus: Why Skin Cancer?
+
+Skin Cancer is the most common cancer in the United States and worldwide. It can affect anyone, regardless of skin color.
+
+<div align="center">
+    <img src="images/SkinCancerFacts.png" alt="skin cancer facts">
+</div>
+
+Skin Cancer Risk Factors:
+<ul>
+    <li> - UV light exposure</li>
+    <li> - Skin type</li>
+    <li> - Family/ personal history of skin cancer</li>
+    <li> - Weak immune system</li>
+    <li> - Age </li>
+</ul>
+
+**Skin Cancer is the cancer you see.** 
+That’s why skin exams, both at home and with a dermatologist, are especially vital.
+
+**Early detection saves lives.** 
+Learning what to look for on your own skin gives you the power to detect cancer early when it’s easiest to cure, before it can become dangerous, disfiguring or deadly.
+
+<div align="center">
+    <img src="images/skinCancerSurvivalChart.png" alt="skin cancer survival">
+</div>
+
 ---
 
 ## Project Overview
 
 **SkinGuardian** is a full-stack, cloud-based platform designed for the early detection of skin cancer. It combines advanced AI with a secure, scalable architecture on AWS to provide real-time diagnosis and personalized recommendations.
+
+### The Vision Behind SkinGuardian
+
+| ![Vision 1](images/vision1.png) | ![Vision 2](images/vision2.png) | ![Vision 3](images/vision3.png) |
+|----------------------------------|----------------------------------|----------------------------------|
+| **Classify skin lesions and support self-conducted skin exams** | **Generate medically accurate diagnosis, especially when access to dermatologists is limited** | **Help in the prevention of skin cancer through personalized recommendations and lifestyle factors tracking** |
 
 ### AI-Driven Diagnosis
 
@@ -58,6 +93,10 @@ I lived in Tunisia and the USA for most of my life, where I experienced healthca
   - Deployed as an AWS SageMaker inference endpoint for real-time skin lesion classification.
 - **Model Architecture:**
   ![model architecture](/images/SkinGuardian-Model-Architecture.drawio.png)
+- **Model Performance Results**
+    <div align="center>
+        <img src="images/SkinGuardianAIModelResults.png" alt="model results">
+    </div>
 
 ---
 
